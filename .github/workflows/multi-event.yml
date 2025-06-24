@@ -3,7 +3,10 @@ on:
         branches:
             - main
             - dev
-
+    pull_request:
+        branches:
+            - main
+    
 jobs:
     hello_world:
         runs-on: ubuntu-latest
@@ -12,5 +15,5 @@ jobs:
               run: |
                 echo "REF: $GITHUB_REF"
                 echo "Job ID: $GITHUB_JOB"
-                echo "Action: GITHUB_ACTION"
-                echo "Actor: GITHUB_ACTOR"
+                echo "Action: $GITHUB_ACTION"
+                echo "Actor: $GITHUB_ACTOR"

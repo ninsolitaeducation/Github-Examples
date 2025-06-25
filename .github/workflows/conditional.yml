@@ -2,7 +2,7 @@ name: example conditional workflow
 on: push
 jobs:
     hello-terra:
-        if: ${{github.repository != 'octo-org/octo-repo-prod'}}
+        if: ${{github.repository == 'ninsolitaeducation/Github-Examples'}}
         runs-on: ubuntu-latest
         steps:
             - name: "Hello Earth"

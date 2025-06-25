@@ -13,4 +13,4 @@ jobs:
         uses: actions/checkout@v3
       - name: Echo line
         run: |
-          echo "Hello from self-hosted runner on Azure VM!"
+          echo "Hello from self-hosted runner on Azure VM!!"

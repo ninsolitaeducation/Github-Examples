@@ -1,0 +1,16 @@
+name: Self-hosted runner Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  self-hosted-runner-job:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      - name: Echo line
+        run: |
+          echo "Hello from self-hosted runner on Azure VM!"

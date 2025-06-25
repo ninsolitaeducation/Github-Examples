@@ -15,3 +15,7 @@ jobs:
                 echo "Group message 1"
                 echo "Group message 2"
                 echo "::endgroup::"
+            - name: step save env val
+              run: echo "MY_VAL=hello" >> $GITHUB_ENV
+            - name: step print env val
+              run: echo $MY_VAL

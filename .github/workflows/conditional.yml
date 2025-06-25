@@ -1,0 +1,14 @@
+name: example conditional workflow
+on: push
+jobs:
+    hello-terra:
+        if: ${{github.repository == 'octo-org/octo-repo-prod'}}
+        runs-on: ubuntu-latest
+        steps:
+            - name: "Hello Earth"
+              run: echo "Hello Earth!"
+    hello-luna:
+        runs-on: ubuntu-latest
+        steps:
+            - name: "Hello Luna"
+              run: echo "Hello Luna!"

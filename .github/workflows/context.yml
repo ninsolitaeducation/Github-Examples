@@ -13,4 +13,5 @@ jobs:
               run: echo "Hello $MY_ACTION"
               env:
                 MY_ACTION: ${{github.action}}
-
+            - name: Context step - Accessing github.actor directly
+              run: echo "Hello ${{github.actor}}"

@@ -1,0 +1,19 @@
+name: Context Examples
+
+on: push
+
+env:
+    MY_WF_ACTION: ${{github.action}}
+
+jobs:
+    context-job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Context step - Accessing github.action directly
+              run: echo "Hello ${{github.action}}"
+            - name: Context step - Accessing github.action through env in step
+              run: echo "Hello $MY_ACTION"
+              env:
+                MY_ACTION: ${{github.action}}
+            - name: Context step - Accessing github.action through env in workflow
+              run: echo "Hello $MY_WF_ACTION"

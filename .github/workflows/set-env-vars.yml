@@ -1,0 +1,14 @@
+name: Set Environment Variables
+
+on: push
+
+jobs:
+    setup-and-use-env:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Set dynamic environment variable
+              run: |
+                echo "DYNAMIC_VAR=Helle from Gibhuv Actions" >> $GITHUB_ENV
+            - name: Use dynamic environment variable
+              run: |
+                echo "The value of DYNAMIC_VAR is: $DYNAMIC_VAR"

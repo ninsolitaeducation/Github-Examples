@@ -1,0 +1,16 @@
+name: Dependent job
+
+on: push
+
+jobs:
+    depends-job:
+        needs: dependent-job
+        runs-on: ubuntu-latest
+        steps:
+            - name: Should run last
+              run: echo "This should run last!"
+    dependent-job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Should run first
+              run: echo "This should run first"

@@ -6,8 +6,6 @@ on: push
 jobs:
     context-job:
         runs-on: ubuntu-latest
-        env:
-            MY_JOB_ACTION: ${{github.action}}
         steps:
             - name: Context step - Accessing github.action directly
               run: echo "Hello ${{github.action}}"
@@ -15,5 +13,4 @@ jobs:
               run: echo "Hello $MY_ACTION"
               env:
                 MY_ACTION: ${{github.action}}
-            - name: Context step - Accessing github.action through env in workflow
-              run: echo "Hello $MY_JOB_ACTION"
+

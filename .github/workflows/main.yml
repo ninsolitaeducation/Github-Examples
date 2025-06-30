@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: ninsolitaeducation/hello-terra@1.1
+        uses: ninsolitaeducation/hello-terra@v1.1
         with:
           who-to-greet: NIN the Solitan
 
